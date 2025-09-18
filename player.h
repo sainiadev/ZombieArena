@@ -5,18 +5,18 @@ using namespace sf;
 class Player
 {
 private:
-	const float START_SPEED = 200;
-	const float START_HEALTH = 100;
+	const float START_SPEED = 200.0f;
+	const float START_HEALTH= 100.0f;
 
 	// Where is the player - 
 	Vector2f m_Position;
 
 	// The sprite
-	Sprite m_sprite;
+	Sprite m_Sprite;
 
 	// Add a texture - 
 	// !!Watch this are change soon
-	Texture m_texture;
+	Texture m_Texture;
 
 	// What is the screen resolution
 	Vector2f m_Resolution;
