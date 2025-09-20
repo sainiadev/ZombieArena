@@ -23,7 +23,7 @@ private:
 	// What size is the current arena
 	IntRect m_Arena;
 	// How big is each tile of arena is -	
-	int m_Tilesize;
+	int m_TileSize;
 
 	// Which direction player is moving - 
 	bool m_UpPressed;
@@ -62,6 +62,8 @@ public:
 	float getRotation();
 	// Send a copy of the sprite to main location -
 	Sprite getSprite();
+
+	int getHealth();
 	
 	// Next four function moves the player -
 	void moveLeft();
@@ -76,6 +78,8 @@ public:
 	void stopDown();
 
 	// We will call this function once every frame -
+
+	void update(float elapsedTime, Vector2i mousePosition);
 
 
 };
