@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="Zombie Arena.cpp" />
   </ItemGroup>
   <ItemGroup>
