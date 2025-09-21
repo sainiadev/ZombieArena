@@ -44,6 +44,12 @@ private:
 	// All out public functions comes here -
 public:
 	Player();
+
+	void upgradeSpeed();
+	void upgradeHealth();
+	void increaseHealthLevel(int amount);
+	
+	// Call this at the start of a new game -
 	void spawn(IntRect, Vector2f resolution, int tileSize);
 
 	// Call this at the end of every game -
@@ -80,6 +86,8 @@ public:
 	// We will call this function once every frame -
 
 	void update(float elapsedTime, Vector2i mousePosition);
+
+	
 
 
 };

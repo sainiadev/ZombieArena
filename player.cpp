@@ -35,7 +35,7 @@ void Player::spawn(IntRect arena, Vector2f resolution, int tileSize)
 	m_Arena.height = arena.height;
 
 	// Remember how big the tile sizes are in this arena -
-	m_Tilesize = tileSize;
+	m_TileSize = tileSize;
 
 	// Store the resolution for the future use
 	m_Resolution.x = resolution.x;
@@ -178,3 +178,27 @@ void Player::update(float elapsedTime, Vector2i mousePosition)
 	float angle = (atan2(mousePosition.y - m_Resolution.y / 2, mousePosition.x - m_Resolution.x / 2) * 180) / 3.141;
 
 	m_Sprite.setRotation(angle);
+}
+
+void Player::upgradeSpeed()
+{
+	// 20% speed upgrade
+	m_Speed += (START_SPEED * .2);
+}
+
+void Player::upgradeHealth()
+{
+	 // 20% health upgrade
+	m_MaxHealth += (START_HEALTH * .2);
+}
+
+void Player::increaseHealthLevel(int amount)
+{
+	m_Health += amount;
+
+	// But not beyond the max health level
+	if (m_Health > m_MaxHealth)
+	{
+		m_Health = m_MaxHealth;
+	}
+}
